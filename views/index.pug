@@ -1,5 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    - var cls = 'myC'
+    = '\t\t'
+    h1(class='hi-' + cls) #{title}
+    = '\n\t\t'
+    p Welcome to the #{title}
+    = '\n\t\t'
+    ul
+        each name in myArr
+            = '\n\t\t\t'
+            li= name
+        = '\n\t\t'
+    = '\n\t\t'
+    footer This is footer content
+    = '\n\t'
